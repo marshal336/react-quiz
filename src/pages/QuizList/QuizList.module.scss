@@ -1,4 +1,5 @@
 .root {
+    @apply px-4;
     .container {
         @apply flex flex-col gap-4 items-center max-w-[1000px] mx-auto p-3 rounded-lg;
 
@@ -7,20 +8,20 @@
         }
 
         .quiz-list {
-            @apply grid grid-cols-3 gap-4;
+            @apply grid sm:grid-cols-3 grid-cols-1 gap-4;
 
             .quiz-item {
-                @apply w-[270px] h-[200px] rounded-xl bg-black p-3 flex flex-col justify-between;
+                @apply lg:w-[270px] w-[180px] lg:h-[200px] h-[170px] rounded-xl bg-black p-3 flex flex-col justify-between;
 
                 .info {
                     @apply flex flex-col gap-3;
 
                     h4 {
-                        @apply text-xl font-bold
+                        @apply lg:text-xl text-base font-bold
                     }
 
                     h3 {
-                        @apply text-lg font-normal
+                        @apply lg:text-lg text-sm font-normal
                     }
                 }
 

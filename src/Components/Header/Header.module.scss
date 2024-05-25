@@ -1,13 +1,13 @@
 .header {
     .title {
-        @apply text-xl bg-black px-3 py-1 rounded-lg;
+        @apply sm:text-xl text-base bg-black px-3 py-1 rounded-lg;
     }
 
     .btns {
-        @apply flex gap-4 items-center;
+        @apply flex sm:gap-4 gap-2 items-center;
 
         .btn {
-            @apply bg-black px-3 py-1 rounded-lg hover:bg-black/40
+            @apply bg-black px-3 py-1 rounded-lg hover:bg-black/40 sm:text-base text-sm
         }
     }
 }
