@@ -1,0 +1,11 @@
+.root {
+    @apply flex flex-col gap-4 items-center py-5;
+
+    .logo {
+        @apply rounded-full mx-auto
+    }
+
+    .btn {
+        @apply bg-white text-black px-3 py-1 rounded-lg hover:bg-white/40;
+    }
+}

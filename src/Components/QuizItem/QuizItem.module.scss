@@ -1,0 +1,11 @@
+.root {
+    @apply flex flex-col pt-4;
+
+    .ul {
+        @apply flex flex-col items-start justify-center gap-3 pt-3;
+
+        .li {
+            @apply border border-white w-full p-3 rounded-lg cursor-pointer hover:bg-white/10;
+        }
+    }
+}
