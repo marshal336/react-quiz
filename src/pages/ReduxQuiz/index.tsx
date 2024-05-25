@@ -1,15 +1,15 @@
 import React from "react"
-import QuizItem from "../QuizItem";
-import End from "../End";
+import QuizItem from "./utils/ReactQuizItem";
+import End from "./utils/End";
 import styles from './QuizWrapper.module.scss'
-import { ReactQuiz } from "../../configs/data"
+import { ReduxQuestions } from "../../configs/data/redux-questions";
 
-export default function QuizWrapper() {
+export default function ReduxQuizPage() {
     const [step, setStep] = React.useState(0)
     const [correct, setCorrect] = React.useState(0)
 
-    const question = ReactQuiz[step]
-    const width = Math.floor(step / ReactQuiz.length * 100)
+    const question = ReduxQuestions[step]
+    const width = Math.floor(step / ReduxQuestions.length * 100)
     const validCorrect = (i: number) => {
         if (i === question.correctAnswer) {
             setCorrect(correct + 1)
@@ -20,10 +20,10 @@ export default function QuizWrapper() {
         <div className={styles.root}>
             <div className="container">
                 <div className={styles.wrapper}>
-                    {step !== ReactQuiz.length &&
+                    {step !== ReduxQuestions.length &&
                         <div style={{ width: `${width}%` }} className={styles.progress} />
                     }
-                    {step !== ReactQuiz.length
+                    {step !== ReduxQuestions.length
                         ? <QuizItem {...question} setStep={setStep} step={step} validCorrect={validCorrect} />
                         : <End correct={correct} />
                     }

@@ -1,4 +1,4 @@
-import { IQuestion } from "../../configs/types/question.types";
+import { IQuestion } from "../../../../configs/types/question.types";
 import styles from './QuizItem.module.scss'
 
 interface IQuizItemProps extends IQuestion {

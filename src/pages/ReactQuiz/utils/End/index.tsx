@@ -1,10 +1,15 @@
-import { ReactQuiz } from "../../configs/data"
 import styles from './End.module.scss'
+import { PAGES } from '../../../../configs/constants/page.const'
+import { ReactQuiz } from '../../../../configs/data/react-questions'
+import { Link } from "react-router-dom"
+
+
 interface IEndProps {
     correct: number
 }
 
 export default function End({ correct }: IEndProps) {
+
     return (
         <div className={styles.root}>
             <img
@@ -15,7 +20,7 @@ export default function End({ correct }: IEndProps) {
                 className={styles.logo} />
             <h2>Congratulations!!</h2>
             <p>You answered {correct} out of {ReactQuiz.length} correctly</p>
-            <a href='/' className={styles.btn}>Restart?</a>
+            <Link to={PAGES.QUIZS} className={styles.btn}>Restart?</Link>
         </div>
     )
 };
