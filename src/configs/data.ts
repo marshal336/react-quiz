@@ -1,4 +1,4 @@
-export const quizQuestions = [
+export const ReactQuiz = [
   {
     question: "Что такое React?",
     options: [

@@ -1,4 +1,4 @@
-import { quizQuestions } from "../../configs/data"
+import { ReactQuiz } from "../../configs/data"
 import styles from './End.module.scss'
 interface IEndProps {
     correct: number
@@ -14,7 +14,7 @@ export default function End({ correct }: IEndProps) {
                 alt="logo"
                 className={styles.logo} />
             <h2>Congratulations!!</h2>
-            <p>You answered {correct} out of {quizQuestions.length} correctly</p>
+            <p>You answered {correct} out of {ReactQuiz.length} correctly</p>
             <a href='/' className={styles.btn}>Restart?</a>
         </div>
     )
